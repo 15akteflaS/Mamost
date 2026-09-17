@@ -6,88 +6,25 @@
 <title>С днём рождения, мама 💜</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Montserrat:wght@400;500;600;700&display=swap');
-*{box-sizing:border-box}
-html,body{width:100%;height:100%;overflow:hidden}
-body{margin:0;background:#fbf8ff;color:#40334d;font-family:Montserrat,sans-serif}
-section{position:fixed;inset:0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px 20px;opacity:0;visibility:hidden;transform:translateY(25px);transition:.8s}
-.page-active{opacity:1;visibility:visible;transform:translateY(0)}
-.hero{background:radial-gradient(circle at 50% 35%,#fff,#f8efff 48%,#eadbfa);text-align:center;overflow:hidden}
-.hero-content{max-width:760px;z-index:2}
-.kicker{font-size:14px;letter-spacing:3px;text-transform:uppercase;color:#8d6ca9;margin-bottom:20px}
-h1,h2{font-family:"Marck Script",cursive;font-weight:400;color:#684485}
-h1{font-size:clamp(55px,13vw,105px);line-height:.95;margin:0 0 24px}
-h2{font-size:clamp(43px,9vw,70px);margin:0 0 24px}
-p{font-size:17px;line-height:1.9}
-.subtitle{max-width:600px;margin:0 auto 34px;color:#695b73}
-button{border:0;background:#79519a;color:white;padding:15px 28px;border-radius:999px;font-size:15px;font-weight:600;cursor:pointer;box-shadow:0 10px 25px #79519a35}
-.flower{position:absolute;opacity:.65;pointer-events:none;animation:float 7s ease-in-out infinite}
-.f1{left:5%;top:12%;font-size:55px}.f2{right:7%;top:18%;font-size:65px}.f3{left:12%;bottom:15%;font-size:45px}.f4{right:10%;bottom:10%;font-size:52px}
-@keyframes float{50%{transform:translateY(-15px) rotate(5deg)}}
-.content{position:relative;z-index:2;width:min(780px,100%);text-align:center}
-.card{background:#fff;border:1px solid #eee3f5;border-radius:32px;padding:38px;box-shadow:0 20px 60px #6b488c12;margin-bottom:25px}
-.card p{text-align:left}
-.signature{font-family:"Marck Script";font-size:35px;color:#79519a;text-align:right;margin-top:30px}
-.photos{background:linear-gradient(160deg,#fbf8ff,#f7f0fb);text-align:center}
-.photo-card{width:min(700px,100%);background:#fff;border:1px solid #eee3f5;border-radius:32px;padding:18px;box-shadow:0 20px 60px #6b488c12;margin-bottom:22px}
-.memory-photo{display:block;width:100%;max-height:62vh;object-fit:contain;border-radius:22px;background:#f4edf8}
-.photo-memory{font-family:"Marck Script",cursive;color:#684485;font-size:30px;margin:4px 0 14px}
-.photo-caption{margin:14px 8px 4px;color:#75687d;text-align:center}
-.final{background:linear-gradient(160deg,#eee0f8,#fbf8ff);text-align:center}
-.final p{max-width:650px;margin:auto}
-.heart{font-size:45px;margin:20px}
-.dots{position:fixed;z-index:20;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:7px}
-.dot{width:7px;height:7px;border-radius:50%;background:#cdb8d9;transition:.3s}
-.dot.active{width:20px;border-radius:10px;background:#79519a}
-.small{font-size:13px;color:#897c91;margin-top:18px}
-footer{text-align:center;padding:25px;color:#9b8da3;font-size:12px;background:#fbf8ff}
-@media(max-width:700px){
-.card{padding:28px 22px}.f1,.f2{font-size:40px}
-.photo-card{padding:12px;border-radius:25px}
-.memory-photo{max-height:58vh;border-radius:18px}
-.photo-memory{font-size:26px}.photo-caption{font-size:15px}
-}
-</style>
-</head>
-<body>
-
-<section class="hero page-active" id="p1">
-<div class="flower f1">🌸</div><div class="flower f2">🌷</div><div class="flower f3">🌿</div><div class="flower f4">🌺</div>
-<div class="hero-content">
-<div class="kicker">маленький подарок для тебя</div>
-<h1>С днём рождения,<br>мама! 💜</h1>
-<p class="subtitle">Я сделал для тебя это маленькое место, чтобы сказать то, что не всегда получается сказать словами.</p>
-<button onclick="next()">🌷 Открыть поздравление</button>
-</div></section>
-
-<section id="p2"><div class="content"><div class="card"><h2>Эленька, это для тебя</h2><p>Ты очень важный для меня человек. Порой я тебя расстраиваю, но надеюсь, что мои личные достижения, тебя радуют больше, потому что я стараюсь быть хорошим сынишкой и пытаться тебя радовать, хоть не всегда получается</p><div class="signature">❤️</div></div><button onclick="next()">Дальше 🌸</button></div></section>
-
-<section id="p3"><div class="content"><div class="card"><h2>Я хочу тебе пожелать</h2><p>Здоровьеца, побольше цветочков и растеней, которыми все гости восхищаются. Пусть рядом будут люди, которые тебя любят(например я :) ), а каждый новый день приносит что-то хорошее.</p></div><button onclick="next()">Ещё 💜</button></div></section>
-
+*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden}body{background:#fbf8ff;color:#40334d;font-family:Montserrat,sans-serif}
+section{position:fixed;inset:0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px 20px;opacity:0;visibility:hidden;transform:translateY(25px);transition:opacity .8s ease,transform .8s ease,visibility .8s ease}.page-active{opacity:1;visibility:visible;transform:translateY(0)}
+.hero{background:radial-gradient(circle at 50% 35%,#fff 0,#f8efff 48%,#eadbfa 100%);text-align:center;overflow:hidden}.hero-content{max-width:760px;z-index:2}.kicker{font-size:14px;letter-spacing:3px;text-transform:uppercase;color:#8d6ca9;margin-bottom:20px}
+h1,h2{font-family:"Marck Script",cursive;font-weight:400;color:#684485}h1{font-size:clamp(55px,13vw,105px);line-height:.95;margin:0 0 24px}h2{font-size:clamp(43px,9vw,70px);margin:0 0 24px}p{font-size:17px;line-height:1.9}.subtitle{max-width:600px;margin:0 auto 34px;color:#695b73}
+button{border:0;background:#79519a;color:white;padding:15px 28px;border-radius:999px;font-size:15px;font-weight:600;cursor:pointer;box-shadow:0 10px 25px #79519a35;transition:.25s}button:hover{transform:translateY(-3px);background:#684485}
+.flower{position:absolute;opacity:.65;pointer-events:none;animation:float 7s ease-in-out infinite}.f1{left:5%;top:12%;font-size:55px}.f2{right:7%;top:18%;font-size:65px;animation-delay:1s}.f3{left:12%;bottom:15%;font-size:45px;animation-delay:2s}.f4{right:10%;bottom:10%;font-size:52px;animation-delay:3s}@keyframes float{50%{transform:translateY(-15px) rotate(5deg)}}
+.content{position:relative;z-index:2;width:min(780px,100%);text-align:center}.card{background:#fff;border:1px solid #eee3f5;border-radius:32px;padding:38px;box-shadow:0 20px 60px #6b488c12;margin-bottom:25px}.card p{text-align:left}.signature{font-family:"Marck Script";font-size:35px;color:#79519a;text-align:right;margin-top:30px}
+.photos{background:linear-gradient(160deg,#fbf8ff,#f7f0fb);text-align:center}.photo-card{width:min(700px,100%);background:#fff;border:1px solid #eee3f5;border-radius:32px;padding:18px;box-shadow:0 20px 60px #6b488c12;margin-bottom:22px}.memory-photo{display:block;width:100%;max-height:62vh;object-fit:contain;border-radius:22px;background:#f4edf8}.photo-memory{font-family:"Marck Script",cursive;color:#684485;font-size:30px;margin:4px 0 14px}.photo-caption{margin:14px 8px 4px;color:#75687d;text-align:center}
+.final{background:linear-gradient(160deg,#eee0f8,#fbf8ff);text-align:center}.final p{max-width:650px;margin:auto}.heart{font-size:45px;margin:20px}.dots{position:fixed;z-index:20;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:7px}.dot{width:7px;height:7px;border-radius:50%;background:#cdb8d9;transition:.3s}.dot.active{width:20px;border-radius:10px;background:#79519a}.small{font-size:13px;color:#897c91;margin-top:18px}
+@media(max-width:700px){.card{padding:28px 22px}.f1,.f2{font-size:40px}.photo-card{padding:12px;border-radius:25px}.memory-photo{max-height:58vh;border-radius:18px}.photo-memory{font-size:26px}.photo-caption{font-size:15px}}
+</style></head><body>
+<section class="hero page-active" id="p1"><div class="flower f1">🌸</div><div class="flower f2">🌷</div><div class="flower f3">🌿</div><div class="flower f4">🌺</div><div class="hero-content"><div class="kicker">маленький подарок для тебя</div><h1>С днём рождения,<br>мама! 💜</h1><p class="subtitle">Я сделал для тебя это маленькое место, чтобы сказать то, что не всегда получается сказать словами.</p><button onclick="next()">🌷 Открыть поздравление</button></div></section>
+<section id="p2"><div class="content"><div class="card"><h2>Эленька, это для тебя</h2><p>Ты очень важный для меня человек. Порой я тебя расстраиваю, но надеюсь, что мои личные достижения тебя радуют больше, потому что я стараюсь быть хорошим сынишкой и пытаться тебя радовать, хоть не всегда получается.</p><div class="signature">❤️</div></div><button onclick="next()">Дальше 🌸</button></div></section>
+<section id="p3"><div class="content"><div class="card"><h2>Я хочу тебе пожелать</h2><p>Здоровьеца, побольше цветочков и растеней, которыми все гости восхищаются. Пусть рядом будут люди, которые тебя любят (например я :) ), а каждый новый день приносит что-то хорошее.</p></div><button onclick="next()">Ещё 💜</button></div></section>
 <section id="p4"><div class="content"><div class="card"><h2>И ещё кое-что</h2><p>У тебя всегда много планов на жизнь, и я верю, что ты стремишься к ним и хочешь их исполнения. Но при этом ты умеешь наслаждаться жизнью — своим садом и Пираткой. Я верю что у тебя все получится, а также что все у нас наконец-то стабилизируется.(КУПИ БАТЕ ПРАДО пж) 🌿🐾</p><div class="signature">И это очень здорово. 💜</div></div><button onclick="next()">Дальше 🌷</button></div></section>
-
 <section id="p5"><div class="content"><div class="card"><h2>Даже если мы ругаемся...</h2><p>Иногда мы можем не понять друг друга и ругаться, поспорить или сказать что-то лишнее. Но несмотря ни на что, ты всё равно моя мамость хе-хе-хе. И это никогда не изменится.</p><div class="signature">Я тебя люблю. ❤️</div></div><button onclick="next()">Фотографии 🌺</button></div></section>
-
-<section id="p6" class="photos"><div class="content"><div class="photo-card"><div class="photo-memory">🌷 Наши моменты</div><img src="images/mama1.jpeg" alt="Мама и сын" class="memory-photo"><p class="photo-caption">Кажется, с таких моментов всё и начинается. 💜</p></div><button onclick="next()">Следующее воспоминание 🌸</button></div></section>
-
-<section id="p7" class="photos"><div class="content"><div class="photo-card"><div class="photo-memory">💜 Ещё один момент</div><img src="images/mama2.jpeg" alt="Мама и сын" class="memory-photo"><p class="photo-caption">Время идёт, а самые тёплые моменты остаются.</p></div><button onclick="next()">Ещё одно 🌺</button></div></section>
-
-<section id="p8" class="photos"><div class="content"><div class="photo-card"><div class="photo-memory">🌿 Просто потому что люблю</div><img src="images/mama3.jpeg" alt="Мама и сын" class="memory-photo"><p class="photo-caption">Спасибо за все наши моменты. И пусть их впереди будет ещё очень много. ❤️</p></div><button onclick="next()">К последней странице 💜</button></div></section>
-
+<section id="p6" class="photos"><div class="content"><div class="photo-card"><div class="photo-memory">🌷 Наши моменты</div><img src="./images/mama1.jpeg" alt="Мама и сын" class="memory-photo"><p class="photo-caption">Кажется, с таких моментов всё и начинается. 💜</p></div><button onclick="next()">Следующее воспоминание 🌸</button></div></section>
+<section id="p7" class="photos"><div class="content"><div class="photo-card"><div class="photo-memory">💜 Ещё один момент</div><img src="./images/mama2.jpeg" alt="Мама и сын" class="memory-photo"><p class="photo-caption">Время идёт, а самые тёплые моменты остаются.</p></div><button onclick="next()">Ещё одно 🌺</button></div></section>
+<section id="p8" class="photos"><div class="content"><div class="photo-card"><div class="photo-memory">🌿 Просто потому что люблю</div><img src="./images/mama3.jpeg" alt="Мама и сын" class="memory-photo"><p class="photo-caption">Спасибо за все наши моменты. И пусть их впереди будет ещё очень много. ❤️</p></div><button onclick="next()">К последней странице 💜</button></div></section>
 <section id="p9"><div class="flower f1">🌸</div><div class="flower f2">🌺</div><div class="content final"><div class="heart">💜</div><h2>С днём рождения, мама!</h2><p>Спасибо тебе за всё.<br><br>Пусть твой садик всегда цветёт, пусть исполняются твои планы и желания, а в жизни будет как можно больше счастливых дней, а Пиратка всегда сытая.</p><div class="signature" style="text-align:center">Люблю тебя ❤️</div><p class="small">И это только начало нашей коллекции воспоминаний...</p></div></section>
-
-<div class="dots" id="dots"></div>
-<script>
-let current=0;
-const pages=[...document.querySelectorAll('section')],dots=document.getElementById('dots');
-pages.forEach((_,i)=>{const d=document.createElement('span');d.className='dot'+(i===0?' active':'');dots.appendChild(d)});
-function next(){
-if(current>=pages.length-1)return;
-pages[current].classList.remove('page-active');
-current++;
-pages[current].classList.add('page-active');
-[...dots.children].forEach((d,i)=>d.classList.toggle('active',i===current));
-}
-</script>
-<footer>Сделано с любовью специально для Григорьевой Эльвиры Олеговны, или просто мамы&lt;3</footer>
-</body>
-</html>
+<div class="dots" id="dots"></div><script>let current=0;const pages=[...document.querySelectorAll('section')],dots=document.getElementById('dots');pages.forEach((_,i)=>{const d=document.createElement('span');d.className='dot'+(i===0?' active':'');dots.appendChild(d)});function next(){if(current>=pages.length-1)return;pages[current].classList.remove('page-active');current++;pages[current].classList.add('page-active');[...dots.children].forEach((d,i)=>d.classList.toggle('active',i===current))}</script>
+</body></html>
